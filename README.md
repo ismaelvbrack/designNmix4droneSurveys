@@ -1,2 +1,1 @@
-# designNmix4droneSurveys
-Performance and optimal design for N-mixture models for spatiotemporally replicated drone-based surveys
+# Performance and optimal design for N-mixture models for spatiotemporally replicated drone-based surveys
