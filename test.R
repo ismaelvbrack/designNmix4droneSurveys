@@ -1,0 +1,2 @@
+# test scrip
+print("hello")
