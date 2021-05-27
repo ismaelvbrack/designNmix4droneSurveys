@@ -1,2 +1,0 @@
-# test scrip
-print("hello")
