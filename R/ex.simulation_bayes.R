@@ -41,7 +41,7 @@ for(j in 1:J){
 #* Analyzing...
 
 # Model in BUGS
-sink("model_1obs.txt") 
+#sink("model_1obs.txt") 
 cat(" 
     model { 
     # Priors
@@ -65,7 +65,7 @@ cat("
     
     } #model
     ",fill = TRUE) 
-sink()
+#sink()
 
 # Bundle data
 data1 <- list(Y = Y, S = S, J = J)
@@ -82,7 +82,7 @@ nc <- 3
 na <- 10000
 
 
-out1 <- jags(data1, inits, params, model.file="model_1obs.txt",
+out1 <- jags(data1, inits, params, model.file=here::here("R","model_1obs.txt"),
             n.chains=nc,n.thin=nt, n.iter=ni, n.burnin=nb, n.adapt=na,parallel=T)
 
 #* see results
@@ -153,7 +153,7 @@ Y <- Y[,-4,]  # excluding "00"
 #* Analyzing...
 
 # Model in BUGS
-sink("model_2obs.txt") 
+#sink("model_2obs.txt") 
 cat(" 
     model { 
     # Priors
@@ -193,7 +193,7 @@ cat("
     
     } #model
     ",fill = TRUE) 
-sink()
+#sink()
 
 # Bundle data
 ncap <- array(dim=c(S,J))
@@ -217,7 +217,7 @@ nc <- 3
 na <- 10000
 
 
-out2 <- jags(data1, inits, params, model.file="model_2obs.txt",
+out2 <- jags(data1, inits, params, model.file=here::here("R","model_2obs.txt"),
             n.chains=nc,n.thin=nt, n.iter=ni, n.burnin=nb, n.adapt=na,parallel=T)
 
 #* see results
@@ -305,7 +305,7 @@ Y <- Y[,-4,]  # excluding "00"
 #* Analyzing...
 
 # Model in BUGS
-sink("model_mixed-protocols.txt") 
+#sink("model_mixed-protocols.txt") 
 cat(" 
     model { 
     # Priors
@@ -350,7 +350,7 @@ cat("
     
     } #model
     ",fill = TRUE) 
-sink()
+#sink()
 
 ##* Data for single observer
 Y1 <- as.vector(Y[,4,])
@@ -382,8 +382,8 @@ nc <- 3
 na <- 10000
 
 # Running!
-out3 <- jags(data, inits, params, "model_mixed-protocols.txt", n.chains = nc, 
-            n.thin = nt, n.iter = ni, n.burnin = nb, n.adapt=na,parallel=T)
+out3 <- jags(data, inits, params, here::here("R","model_mixed-protocols.txt"),
+             n.chains=nc,n.thin=nt,n.iter=ni,n.burnin=nb,n.adapt=na,parallel=T)
 
 #* see results
 out3
