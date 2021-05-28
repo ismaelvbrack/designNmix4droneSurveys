@@ -1,7 +1,7 @@
 #-----------------------------------------------------
 ####** function to extract optimal J and range for each scenario
 
-getOptJ <- function(data, lambda.seq, phi.seq, range=TRUE){
+getOptJ <- function(data, lambda.seq, phi.seq, range=TRUE, equiLim){
   if(length(lambda.seq)*length(phi.seq) != length(data)){
     stop("Number of scenarios in data differs from lambda and phi values")
   }
@@ -21,7 +21,7 @@ getOptJ <- function(data, lambda.seq, phi.seq, range=TRUE){
   if(range==TRUE){
     tabs2 <- list()
     for(ob in 1:length(obs)){
-      tabs[[ob]] <-   matrix(sapply(data, function(x)
+      tabs2[[ob]] <-   matrix(sapply(data, function(x)
         paste(range(as.numeric(names(which(x[,obs[ob]]<(min(x[,obs[ob]])+equiLim))
         ))), collapse = "-")),
         ncol=length(lambda.seq),byrow=T,dimnames=list(phi.seq,lambda.seq))
