@@ -39,4 +39,4 @@ vignettes/*.pdf
 .Renviron
 
 # Raw simulation results
-data/raw_simul_resu
+data/raw_simul_resu/*.rds
