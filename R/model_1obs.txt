@@ -1,0 +1,23 @@
+ 
+    model { 
+    # Priors
+    p~dunif(0,1)
+    lambda~dunif(0,100)
+    
+    # Likelihood 
+    
+    # Biological model for true abundance 
+    for (i in 1:S) { 
+      M[i] ~ dpois(lambda)
+      
+      # Observation model for replicated counts 
+      for (j in 1:J) { 
+        Y[i,j] ~ dbin(p , M[i])
+      }#j
+    } #i
+    
+    # Derived quantities
+    totalM <- sum(M[])
+    
+    } #model
+    

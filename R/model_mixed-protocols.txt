@@ -1,0 +1,44 @@
+ 
+    model { 
+    # Priors
+    phi~dunif(0,1)
+    p~dunif(0,1)
+    lambda~dunif(0,40)
+    
+    # Likelihood 
+    # Biological model for true abundance 
+    for (i in 1:S) { 
+      M[i] ~ dpois(lambda)
+    # Model for available individuals in replicated counts
+      for (j in 1:J) { 
+         avails[i,j] ~ dbin(phi , M[i])
+      } #j
+    } #i
+    
+    # Define multinomial cell probabilities
+      mu[1] <- (1-p) * p    # 01
+      mu[2] <- p * (1-p)     # 10
+      mu[3] <- p * p         # 11
+      pi0 <- 1 - mu[1] - mu[2] - mu[3]
+      pcap <- 1 - pi0 #Probability of detection by at least one observer
+      #Conditional probabilities:
+      for (k in 1:3) {
+         muc[k] <- mu[k] / pcap
+      } #k
+          
+    # Observation model for single observer
+    for(j in 1:length(Y1)) {
+      Y1[j] ~ dbin(p, avails[siteID1[j] , visits1[j]])
+    } #j
+    
+    # Observation model for multiple observers - conditional multinomial
+    for(j in 1:length(ncap)) {
+      ncap[j] ~ dbin(pcap , avails[siteID2[j] , visits2[j]])
+      Y2[j,1:3] ~ dmulti(muc[1:3] , ncap[j])
+    } #j
+    
+    # Derived quantities
+    totalM <- sum(M[])
+    
+    } #model
+    
