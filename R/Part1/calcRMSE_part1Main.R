@@ -1,7 +1,7 @@
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ##* Calculate RMSE and get optimal number of visits (J) per scenario
-##*  1-73 scenarios of local abundance and availability
+##*  1-64 scenarios of local abundance and availability
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 source(here::here("R","func_getOptJ.R"))
@@ -10,9 +10,6 @@ source(here::here("R","func_getOptJ.R"))
 
 # scens 1-64
 results <- readRDS(here::here("data","processed_simul_resu","resultsP1_scen1-64.rds"))
-
-# scens 65-73
-#results2 <- readRDS(here::here("data","processed_simul_resu","resultsP1_scen65-73.rds"))
 
 # scenarios
 phi.seq <- seq(0.1,0.8,0.1) # availability
