@@ -82,7 +82,7 @@ nc <- 3
 na <- 10000
 
 
-out1 <- jags(data1, inits, params, model.file=here::here("R","model_1obs.txt"),
+out1 <- jags(data1, inits, params, model.file=here::here("R","JAGS_models","model_1obs.txt"),
             n.chains=nc,n.thin=nt, n.iter=ni, n.burnin=nb, n.adapt=na,parallel=T)
 
 #* see results
@@ -217,7 +217,7 @@ nc <- 3
 na <- 10000
 
 
-out2 <- jags(data1, inits, params, model.file=here::here("R","model_2obs.txt"),
+out2 <- jags(data1, inits, params, model.file=here::here("R","JAGS_models","model_2obs.txt"),
             n.chains=nc,n.thin=nt, n.iter=ni, n.burnin=nb, n.adapt=na,parallel=T)
 
 #* see results
@@ -382,7 +382,7 @@ nc <- 3
 na <- 10000
 
 # Running!
-out3 <- jags(data, inits, params, here::here("R","model_mixed-protocols.txt"),
+out3 <- jags(data, inits, params, here::here("R","JAGS_models","model_mixed-protocols.txt"),
              n.chains=nc,n.thin=nt,n.iter=ni,n.burnin=nb,n.adapt=na,parallel=T)
 
 #* see results
