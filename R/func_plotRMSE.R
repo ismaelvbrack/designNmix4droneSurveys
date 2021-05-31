@@ -7,7 +7,7 @@
 ####* type= propObs: for different proportions of 2obs protocol based on scenario
 ####* type = effortDiff: 
 
-plotRMSE <- function(data,data2=NULL,scen,type="simple",complete=FALSE){
+plotRMSE <- function(data,data2=NULL,scen,type="simple",complete=FALSE,yax=NULL){
   require(ggplot2)
   require(gridExtra)
   require(ggpubr)
@@ -21,7 +21,9 @@ plotRMSE <- function(data,data2=NULL,scen,type="simple",complete=FALSE){
     i=scen
     data <- data[[i]]
     # arranging needed information
-    yax <- c(0, max(data$RMSE))
+    if(is.null(yax)){
+      yax <- c(0, max(data$RMSE))
+    }
     
     tab <- data.frame(optJ=tapply(data$RMSE, data$obs2,
                                   function(x) as.numeric(as.character(data[data$RMSE==min(x),"J"]))),
@@ -39,7 +41,7 @@ plotRMSE <- function(data,data2=NULL,scen,type="simple",complete=FALSE){
               geom_line(size=1.6) + scale_x_continuous(breaks=2:30) +
               coord_cartesian(ylim=yax) +
               theme_classic() + scale_color_manual(labels=c("1obs","2obs"),values=c("#3B9AB2","#F21A00")) + 
-              theme(axis.title=element_blank(),axis.text=element_text(size=13),legend.position="none") 
+              theme(axis.title=element_blank(),axis.text=element_text(size=13),legend.position="none")
       
       figJs <- ggplot(tab, aes(x=optJ,y=obs2,color=obs2,xmin=Jmin,xmax=Jmax)) + 
                   geom_point(size=5,shape=18) + geom_errorbarh(size=1.2,height=0.5) +
@@ -88,7 +90,9 @@ plotRMSE <- function(data,data2=NULL,scen,type="simple",complete=FALSE){
     i=scen
     data <- data[[i]]
     # arranging needed information
-    yax <- c(0, max(data$RMSE))
+    if(is.null(yax)){
+      yax <- c(0, max(data$RMSE))
+    }
     
     tab <- data.frame(optJ=tapply(data$RMSE, data$obs2,
                                   function(x) as.numeric(as.character(data[data$RMSE==min(x),"J"]))),
@@ -160,7 +164,9 @@ plotRMSE <- function(data,data2=NULL,scen,type="simple",complete=FALSE){
              )
     
     # arranging needed information
-    yax <- c(0, max(data$RMSE))
+    if(is.null(yax)){
+      yax <- c(0, max(data$RMSE))
+    }
     
     tab <- data.frame(optJ=tapply(data$RMSE, data$obs2,
                                   function(x) as.numeric(as.character(data[data$RMSE==min(x),"J"]))),
