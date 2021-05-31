@@ -9,6 +9,16 @@ Designing drone surveys for N-mixture models
 
 #### ***Performance and optimal design of N-mixture models for spatiotemporally replicated drone-based surveys***
 
+#### This repo is under construction…
+
+**ToDo:**  
+
+-   [x] Create MIT license
+-   [ ] Upload raw simulation results in zenodo
+-   [ ] Write examples in README
+-   [ ] Generate table results
+-   [ ] Build Rmd files for webpage
+
 # Description
 
 Repository for the manuscript *OPTIMALLY DESIGNING DRONE SURVEYS FOR
@@ -89,13 +99,18 @@ The simulation study is divided in three parts:
 download.file(url = "https://github.com/ismaelvbrack/designNmix4droneSurveys/archive/main.zip", destfile = "designNmix4droneSurveys.zip")
 ```
 
-## Download raw simulation results (XXX Mb) from zenodo
+## Download raw simulation results
 
-### Manual download [here](http..) and paste in `~/data/raw_simul_resu`
+To reproduce the results from raw simulation results, download them from
+zenodo (XXX Mb).  
+Otherwise, you can reproduce starting from processed simulation results
+(cleaned and extracted available here) directly from this repo.
 
-**or**
+**Manual download [here](http..) and paste in `~/data/raw_simul_resu`**
 
-### Download from RStudio
+or
+
+**Download from RStudio**
 
 ``` r
 library(zen4R)
