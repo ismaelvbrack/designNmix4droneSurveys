@@ -5,7 +5,6 @@ Designing drone surveys for N-mixture models
 -   [Simulation experiments](#simulation-experiments)
 -   [Repository contents](#repository-contents)
 -   [Running code](#running-code)
--   [Examples](#examples)
 
 #### ***Performance and optimal design of N-mixture models for spatiotemporally replicated drone-based surveys***
 
@@ -18,6 +17,7 @@ Designing drone surveys for N-mixture models
 -   [ ] Write examples in README
 -   [ ] Generate table results
 -   [ ] Build Rmd files for webpage
+-   \[ \]
 
 # Description
 
@@ -28,8 +28,11 @@ explore, in a very wide scan study, the performance (based on root mean
 squared error) and optimal survey effort allocation for hierarchical
 N-mixture models, focusing on the application for drone-based surveys
 and the use of a double observer protocol to decompose the detection
-process in availability and perception. For more details of the
-simulation results see [this website](http...).
+process in availability and perception.  
+We provide an interactive and “ready-to-consult” [webpage](http...)
+hoping to assist ecologists and conservationists in panning
+spatiotemporally replicated drone-based surveys for abundance modeling.
+There we show in detail simulation results and run some examples.
 
 # Simulation experiments
 
@@ -116,5 +119,3 @@ or
 library(zen4R)
 download_zenodo(doi=xxx, path=here::here("data","raw_simul_resu"))
 ```
-
-# Examples

@@ -20,8 +20,8 @@ output:
 
 # Description
 Repository for the manuscript *OPTIMALLY DESIGNING DRONE SURVEYS FOR WILDLIFE ABUNDANCE MODELING WITH N-MIXTURE MODELS*.\
-This repository contains the simulation results and `R` codes to explore, in a very wide scan study, the performance (based on root mean squared error) and optimal survey effort allocation for hierarchical N-mixture models, focusing on the application for drone-based surveys and the use of a double observer protocol to decompose the detection process in availability and perception.
-For more details of the simulation results see [this website](http...).
+This repository contains the simulation results and `R` codes to explore, in a very wide scan study, the performance (based on root mean squared error) and optimal survey effort allocation for hierarchical N-mixture models, focusing on the application for drone-based surveys and the use of a double observer protocol to decompose the detection process in availability and perception.\
+We provide an interactive and "ready-to-consult" [webpage](http...) hoping to assist ecologists and conservationists in panning spatiotemporally replicated drone-based surveys for abundance modeling. There we show in detail simulation results and run some examples.
 
 # Simulation experiments
 The simulation study is divided in three parts:
@@ -68,7 +68,7 @@ download.file(url = "https://github.com/ismaelvbrack/designNmix4droneSurveys/arc
 
 ## Download raw simulation results
 To reproduce the results from raw simulation results, download them from zenodo  (XXX Mb).\
-Otherwise, you can reproduce starting from processed simulation results (cleaned and extracted available here) directly from this repo.
+Otherwise, reproduce starting from processed simulation results (cleaned and extracted, available here) directly from this repo.
 
 **Manual download [here](http..) and paste in `~/data/raw_simul_resu`**
 
@@ -80,5 +80,4 @@ library(zen4R)
 download_zenodo(doi=xxx, path=here::here("data","raw_simul_resu"))
 ```
 
-#  Examples
 
