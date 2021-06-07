@@ -17,7 +17,6 @@ Designing drone surveys for N-mixture models
 -   [ ] Write examples in README
 -   [ ] Generate table results
 -   [ ] Build Rmd files for webpage
--   \[ \]
 
 # Description
 
@@ -106,8 +105,8 @@ download.file(url = "https://github.com/ismaelvbrack/designNmix4droneSurveys/arc
 
 To reproduce the results from raw simulation results, download them from
 zenodo (XXX Mb).  
-Otherwise, you can reproduce starting from processed simulation results
-(cleaned and extracted available here) directly from this repo.
+Otherwise, reproduce starting from processed simulation results (cleaned
+and extracted, available here) directly from this repo.
 
 **Manual download [here](http..) and paste in `~/data/raw_simul_resu`**
 
