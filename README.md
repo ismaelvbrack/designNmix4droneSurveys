@@ -14,8 +14,7 @@ Designing drone surveys for N-mixture models
 
 -   [x] Create MIT license
 -   [ ] Upload raw simulation results in zenodo
--   [ ] Write examples in README
--   [ ] Generate table results
+-   [x] Generate table results
 -   [ ] Build Rmd files for webpage
 
 # Description
@@ -44,21 +43,18 @@ The simulation study is divided in three parts:
     population density and detection probability and address the optimal
     survey effort allocation in terms of spatial vs. temporal
     prioritization for each scenario.**  
-    Main, high abundance and double effort.
 
 -   #### Part 2: *exploring the benefit of the double observer protocol*
 
     **In this experiment, we investigate how the use of double observer
     protocol increases model performance and affects optimal survey
     effort allocation.**  
-    Explain here…
 
 -   #### Part 3: *can the double-observer protocol be used to reduce field survey effort?*
 
     **Here, we evaluate if the use of double observer protocol can
     reduce the effort needed in fieldwork to achieve the same model
     performance as in a single observer approach.**  
-    Explaining a little bit…
 
 # Repository contents
 
