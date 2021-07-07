@@ -74,5 +74,3 @@ or
 library(zen4R)
 download_zenodo(doi=xxx, path=here::here("data","raw_simul_resu"))
 ```
-
-
