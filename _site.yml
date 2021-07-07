@@ -1,0 +1,29 @@
+name: "designNmix4droneSurveys"
+author: "Ismael V. Brack"
+output_dir: "."
+navbar:
+  title: "Designing drone surveys for N-mixture models" 
+  type: inverse
+  left:
+    - icon: fa-home
+      href: index.html
+    - text: "Sampling design & Models"
+      href: designANDmodels.html                        # mudar aqui
+    - text: "Simulations description"
+      href: simul_description.html
+    - text: "Run example"
+      href: runExample.html
+    - text: "Results"
+      href: simul_results.html
+  right:
+    - icon: fa-envelope-o
+      href: mailto:ismaelbrack@hotmail.com                
+    - icon: fa-github
+      href: https://github.com/ismaelvbrack/designNmix4droneSurveys
+    - icon: fa-twitter
+      href: https://twitter.com/ismaelvbrack
+      
+output:
+  html_document:
+    theme: readable
+    highlight: textmate
