@@ -16,7 +16,7 @@ knitr::include_graphics('fig_samplingDesign_models.png')
 
 ## N-mixture models
 
-Resulting count data is a 2D array (sites x visits) for single observer counts or 3D array (sites x visits x observable encounter histories) for the double observer protocol.\
+Resulting count data is a 2D array (sites x visits) for single observer counts or 3D array (sites x visits x observable encounter histories) for the double-observer protocol.\
 This count data can be fitted using hierarchical N-mixture models.
 
 ### Single observer counts
@@ -32,7 +32,7 @@ $M_{i}$: Local abundance in sites {*i*...*S*} is governed by a mean local abunda
 $Y_{i,j}$: Observer counts for each site *i* in each visit *j* is determined by the overall detection probability $p^{*}$, that is the product of individuals availability $\phi$ and perception $p$
 </font>
 
-### Double observer protocol
+### Double-observer protocol
 
 **Double observer counts are fitted using a Multinomial N-mixture model with a temporary emigration component** (Chandler, Royle, and King  2011, *Ecology*)
 
@@ -48,5 +48,5 @@ $Y_{i,j,k}$: Counts under each observable encounter history *k*, in each visit *
 
 ### Mixed (single and double) protocols
 
-A double observer protocol can be applied in only a subset of the imagery and it is still possible to segregate availability and perception probabilities in the Multinomial N-mixture model.
+A double-observer protocol can be applied in only a subset of the imagery and it is still possible to segregate availability and perception probabilities in the Multinomial N-mixture model.
 

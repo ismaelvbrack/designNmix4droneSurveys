@@ -13,17 +13,17 @@ We explore, in a very wide scan study with several scenarios, the performance an
 We specifically addressed three aspects:
 
   1. **optimal design of count surveys for N-mixture abundance estimation**
-  2. **exploring the benefit of the double observer protocol**
-  3. **can the double-observer protocol be used to reduce field survey effort?**
+  2. **exploring the benefit of the double-observer protocol**
+  3. **reducing fieldwork effort by employing a double-observer protocol**
 
 This website contains:
 
 - [a basic explanation of the required sampling design and modeling description](designANDmodels.html)
 - [a brief description of the simulation experiments](simul_description.html)
 - [an interactive tool to run single examples with customizable scenario and survey - design](runExample.html)
-- [see the simulation results on the performance and optimal survey design for (many) predefined scenarios](simul_results.html)
+- [see the simulation results on the performance and optimal survey design for predefined scenarios](simul_results.html)
 
-
+\ 
 
 Codes (`R`) to reproduce the same results or explore other scenarios are available at the [GitHub repo](https://github.com/ismaelvbrack/designNmix4droneSurveys).\
 We also provide codes to fit the models with the `unmarked` `R` package using maximum likelihood estimation and `JAGS` codes for Bayesian analysis.
