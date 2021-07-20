@@ -1,0 +1,13 @@
+name: simulNmix_results
+title: simulNmix_results
+username:
+account: ismaelbrack
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4364081
+bundleId: 4838411
+url: https://ismaelbrack.shinyapps.io/simulNmix_results/
+when: 1626798796.08438
+lastSyncTime: 1626798796.08438
+asMultiple: FALSE
+asStatic: FALSE
