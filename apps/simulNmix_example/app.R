@@ -37,6 +37,9 @@ ui <- fluidPage(
   )
 ) #page - ui
 
+
+# server ------------------------------------------------------------------
+
 server <- function(input, output){
   output$modResu <- renderUI({
     resul <- simul_Nmix(S=input$S,J=input$J,obs2=input$obs2,lambda=input$lambda,phi=input$phi,p=input$p)
