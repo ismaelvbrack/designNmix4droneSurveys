@@ -58,7 +58,7 @@ for(i in 1:length(rel.rmse)){
 }
 
 
-##
+## Budget reduction...
 lapply(rel.rmse2, function(x) rbind(x[1,],
                                     x[which.min(abs(x$RMSE2 - x$RMSE1ref)),]))
 
