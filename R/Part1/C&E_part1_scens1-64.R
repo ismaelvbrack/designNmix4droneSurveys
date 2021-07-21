@@ -40,3 +40,12 @@ for(i in 1:length(results)){
 }
 
 saveRDS(results, here::here("data","processed_simul_resu","resultsP1_scen1-64.rds"))
+
+
+# number of excluded iterations -------------------------------------------
+n.iter <- lapply(results,function(x) table(x$obs2,x$J))
+
+lapply(n.iter,function(x) )
+
+
+
