@@ -65,7 +65,7 @@ plotRMSE <- function(data,data2=NULL,scen,type="simple",complete=FALSE,yax=NULL)
         theme(axis.text=element_text(size=13),axis.title=element_text(size=16),
               legend.position="top") +
         scale_color_manual(labels=c("1obs","2obs"),values=c("#3B9AB2","#F21A00")) + 
-        labs(x="Number of visits (J)",color="Model")
+        labs(y="relative RMSE",x="Number of visits (J)",color="Model")
         
       figJs <- ggplot(tab, aes(x=optJ,y=obs2,color=obs2,xmin=Jmin,xmax=Jmax)) + 
         geom_point(size=5,shape=18) + geom_errorbarh(size=1.2,height=0.5) +
@@ -132,7 +132,7 @@ plotRMSE <- function(data,data2=NULL,scen,type="simple",complete=FALSE,yax=NULL)
         theme_classic() +
         scale_color_manual(values=wes_palette("Zissou1",length(unique(data$obs2)),type="continuous")) + 
         theme(axis.text=element_text(size=13),axis.title=element_text(size=16),legend.position="top") +
-        labs(x="Number of visits (J)",color=" Prop. of \nDouble Obs.")
+        labs(y="relative RMSE",x="Number of visits (J)",color=" Prop. of \nDouble Obs.")
     
       figJs <- ggplot(tab, aes(x=optJ,y=obs2,color=obs2,xmin=Jmin,xmax=Jmax)) + 
         geom_point(size=5,shape=18) + geom_errorbarh(size=1.2,height=0.5) +
@@ -209,7 +209,7 @@ plotRMSE <- function(data,data2=NULL,scen,type="simple",complete=FALSE,yax=NULL)
         scale_linetype_manual(values=c("solid", "twodash")) + coord_cartesian(ylim=yax) +
         theme_classic() + scale_color_manual(labels=c("1obs","2obs"),values=c("#3B9AB2","#F21A00")) + 
         theme(axis.text=element_text(size=13),axis.title=element_text(size=16),legend.position="top") +
-        labs(x="Number of visits (J)",color=" Model",linetype="Effort")
+        labs(y="relative RMSE",x="Number of visits (J)",color=" Model",linetype="Effort")
       
       figJs <- ggplot(tab, aes(x=optJ,y=obs2,color=obs2,xmin=Jmin,xmax=Jmax,linetype=effort)) + 
         geom_point(size=5,shape=18,position=position_dodge(0.9)) + 

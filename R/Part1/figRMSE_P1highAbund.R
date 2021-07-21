@@ -27,7 +27,7 @@ figRMSE <-
   )
 
 # add x- and y- axis labels
-figRMSE <- annotate_figure(figRMSE,left=text_grob("RMSE", size=20, rot=90),
+figRMSE <- annotate_figure(figRMSE,left=text_grob("relative RMSE", size=20, rot=90),
                                  bottom=text_grob("Number of visits (J)", size=20))
 
 # legend
@@ -62,5 +62,5 @@ figRMSE <- grid.arrange(
 )
 
 # save figure!
-ggsave(here::here("outputs","figs","figRMSE_P1highAbund.png"),figRMSE,width=40,height=30,units="cm")
+ggsave(here::here("outputs","figs","figRMSE_P1highAbund.png"),figRMSE,width=50,height=40,units="cm")
 

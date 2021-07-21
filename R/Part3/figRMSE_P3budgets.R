@@ -22,7 +22,7 @@ ggplot(data=rel.rmse2[[scen]], aes(x=budget,y=RMSE2,color="2obs")) + #aes(x=S,y=
   scale_color_manual(values=c("#3B9AB2","#F21A00")) +
   #scale_x_continuous(breaks=seq(round(min(a$S)/100)*100,round(max(a$S)/100)*100,length.out=6)) +
   theme_classic() + 
-  labs(x="Total effort (budget)",y="RMSE",color="Model")
+  labs(x="Total effort (budget)",y="relative RMSE",color="Model")
 
 #* One fig per scenario
 for(scen in 1:length(rel.rmse2)){
@@ -43,7 +43,7 @@ figRMSE <- grid.arrange(figRMSE1+theme(axis.title=element_blank()),figRMSE2+them
                         figRMSE5+theme(axis.title=element_blank()),figRMSE6+theme(axis.title=element_blank()),
                         nrow=3,ncol=2)
 # add x- and y- axis labels
-figRMSE <- annotate_figure(figRMSE,left=text_grob("RMSE", size=16, rot=90),
+figRMSE <- annotate_figure(figRMSE,left=text_grob("relative RMSE", size=16, rot=90),
                                   bottom=text_grob("Total effort (budget)", size=16))
 
 #* arrange final figure with simulation scenarios labels

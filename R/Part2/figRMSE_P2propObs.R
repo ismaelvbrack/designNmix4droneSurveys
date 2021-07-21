@@ -30,7 +30,7 @@ figRMSE <-
   )
 
 # add x- and y- axis labels
-figRMSE <- annotate_figure(figRMSE,left=text_grob("RMSE", size=20, rot=90),
+figRMSE <- annotate_figure(figRMSE,left=text_grob("relative RMSE", size=20, rot=90),
                            bottom=text_grob("Number of visits (J)", size=20))
 
 # legend
@@ -75,9 +75,13 @@ optRMSE <- cbind(optRMSE,
                  do.call(rbind,strsplit(as.character(optRMSE[,2]),"_")))
 names(optRMSE) <- c("obs2","scen","RMSE","RMSEdiff","lambda","phi")
 
+lm1 <- lm(RMSE ~ interaction(phi,lambda)*as.numeric(as.character(obs2))-1,data=optRMSE)
+lm2 <- lm(RMSEdiff ~ interaction(phi,lambda)*as.numeric(as.character(obs2))-1,data=optRMSE)
+
 fig1RMSEobs <- ggplot(data=optRMSE, aes(x=obs2, y=RMSE, col=phi, linetype=lambda,group=interaction(phi,lambda))) +
-  geom_line(size=1.2) + scale_color_manual(values=c("gray70","gray40","black")) +
-  labs(x="Prop. of double observer protocol",col=expression(phi),linetype=expression(lambda)) +
+  geom_line(size=1.2) + scale_color_manual(values=c("gold2","chocolate1","orangered4")) +
+  scale_linetype_manual(values=c(4,1)) + 
+  labs(y="relative RMSE",x="Prop. of double observer protocol",col=expression(phi),linetype=expression(lambda)) +
   scale_x_discrete(labels=paste0(as.numeric(as.character(unique(optRMSE$obs2)))*100,"%")) +
   theme_classic() + theme(legend.position="right")
 
@@ -86,11 +90,24 @@ fig1RMSEobs <- ggplot(data=optRMSE, aes(x=obs2, y=RMSE, col=phi, linetype=lambda
 
 # 3. Figure difference in RMSE ~ obs2 --------------------------------------------
 
-figRMSEdiffObs <- ggplot(data=optRMSE, aes(x=obs2, y=RMSEdiff*-100, col=phi, linetype=lambda,group=interaction(phi,lambda))) +
-  geom_line(size=1.2) + scale_color_manual(values=c("gray70","gray40","black")) +
-  labs(y="Difference in RMSE (%)",x="Prop. of double observer protocol",col=expression(phi),linetype=expression(lambda)) +
+# figRMSEdiffObs <- ggplot(data=optRMSE, aes(x=obs2, y=RMSEdiff*-100, col=phi, linetype=lambda,group=interaction(phi,lambda))) +
+#   geom_line(size=1.2) + scale_color_manual(values=c("gold2","chocolate1","orangered4")) +
+#   scale_linetype_manual(values=c(4,1)) + 
+#   labs(y="Difference in rel.RMSE (%)",x="Prop. of double observer protocol",col=expression(phi),linetype=expression(lambda)) +
+#   scale_x_discrete(labels=paste0(as.numeric(as.character(unique(optRMSE$obs2)))*100,"%")) +
+#   theme_classic() + theme(legend.position="right")
+
+figRMSEdiffObs <- ggplot(data=optRMSE,
+       aes(x=obs2, y=RMSEdiff*-100, col=phi, linetype=lambda,shape=lambda,group=interaction(phi,lambda))) +
+  geom_point(size=2) + stat_smooth(method="lm",se=F)+
+  scale_color_manual(values=c("gold2","chocolate1","orangered4")) +
+  scale_linetype_manual(values=c(4,1)) + 
+  labs(y="Difference in rel.RMSE (%)",x="Prop. of double observer protocol",
+       col=expression(phi),linetype=expression(lambda),shape=expression(lambda)) +
   scale_x_discrete(labels=paste0(as.numeric(as.character(unique(optRMSE$obs2)))*100,"%")) +
-  theme_classic() + theme(legend.position="right")
+  theme_classic() + theme(legend.position="right") +
+  guides(linetype=guide_legend(override.aes=list(color=1)))
+
 
 #ggsave(here::here("outputs","figs","figP2_RMSEdiff~propObs.png"),figRMSEdiffObs,width=12,height=10,units="cm")
 
