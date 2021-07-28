@@ -21,18 +21,18 @@ simul_Nmix(S=69,J=29,obs2=0,lambda=.1,phi=.1,p=.8)
 ##*    Defining scenarios
 ###-------------------------###
 # availability of individuals
-phi.seq <- seq(0.1,0.8,0.1)
+phi.seq <- 0.14 #seq(0.1,0.8,0.1)
 
 # local abundance per site
-lambda.seq <- c(0.1,0.2,0.3,0.5,1,2,4,8)
+lambda.seq <- 0.33 #c(0.1,0.2,0.3,0.5,1,2,4,8)
 
 scenarios <- data.frame(lambda=rep(lambda.seq,length(phi.seq)),phi=rep(phi.seq,each=length(lambda.seq)))
 
 # proportion of double obsevers
-obs2.seq <- c(0,1) #obs2.seq <- c(0.1,0.2,0.4,0.6,0.8)
+obs2.seq <- c(0,0.2,0.5,1) #obs2.seq <- c(0.1,0.2,0.4,0.6,0.8)
 
 # total effort = budget
-effort <- 4000 # sites x visits
+effort <- 812 #2000 # sites x visits
 
 # number of iterations
 simul <- 2000
@@ -55,7 +55,7 @@ scen = 0
 
 for(i in 1:nrow(scenarios)){    
   temp.out <- list() # object to contain all iterations of one scenario
-  j.seq <- 2:(scenarios$Jmax[i])
+  j.seq <- 4:26 #2:(scenarios$Jmax[i])
   for(j in seq_along(j.seq)){
     
     S <- round(effort/j.seq[j]) # number of sites is effort / J
@@ -89,7 +89,10 @@ for(i in 1:nrow(scenarios)){
   names(resu)[scen] <- paste0(scenarios$lambda[i],"_",scenarios$phi[i]) # name!
   #}#lambda
   #}#phi
-  saveRDS(resu,here::here("outputs","temp-resu.rds"))
+  #saveRDS(resu,here::here("outputs","temp-resu.rds"))
 }# scenarios loop
+
+
+saveRDS(resu,here::here("data","raw_simul_resu","resu2_caseEx_MarshDeer.rds"))
 
 
