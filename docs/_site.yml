@@ -8,9 +8,7 @@ navbar:
     - icon: fa-home
       href: index.html
     - text: "Sampling design & Models"
-      href: designANDmodels.html                        # mudar aqui
-    - text: "Simulations description"
-      href: simul_description.html
+      href: designANDmodels.html                        
     - text: "Run example"
       href: runExample.html
     - text: "Results"
