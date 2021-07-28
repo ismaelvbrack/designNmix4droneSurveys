@@ -1,6 +1,5 @@
 ---
 title: "simul_results"
-output: html_document
 runtime: shiny
 ---
 ```{r include=F}

@@ -1,6 +1,5 @@
 ---
 title: "Running an example..."
-output: html_document
 runtime: shiny
 ---
 
