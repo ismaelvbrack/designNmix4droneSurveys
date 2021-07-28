@@ -1,5 +1,5 @@
 ---
-
+title: Designing drone surveys for N-mixture models
 ---
 
 # Performance and optimal design of N-mixture models for spatiotemporally replicated drone-based surveys

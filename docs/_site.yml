@@ -2,7 +2,7 @@ name: "designNmix4droneSurveys"
 author: "Ismael V. Brack"
 output_dir: "."
 navbar:
-  title: "Designing drone surveys for N-mixture models" 
+  title: "designNmix4droneSurveys" 
   type: inverse
   left:
     - icon: fa-home

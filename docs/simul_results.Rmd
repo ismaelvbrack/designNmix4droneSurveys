@@ -1,5 +1,4 @@
 ---
-title: "simul_results"
 runtime: shiny
 ---
 ```{r include=F}
@@ -12,7 +11,7 @@ library(widgetframe)
 Choose a scenario of local abundance in sites $\lambda$ and individual availability probability $\phi$ to see single and double observer models performance (relative RMSE curves) and optimal survey effort allocation (optimal number of visits).
 
 \ 
-<iframe height="1500" width="110%" frameborder="no" 
+<iframe height="1700" width="110%" frameborder="no" 
 src="https://ismaelbrack.shinyapps.io/simulNmix_results/"> </iframe>
 \ 
 
@@ -47,8 +46,7 @@ knitr::include_graphics('tab_reduction_budget.png')
 
 \  
 
-<font size="2"> 
 For more details on the simulation methods and results check out the original paper. 
-</font>
+
 
 
