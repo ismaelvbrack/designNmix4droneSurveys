@@ -15,7 +15,7 @@ Designing drone surveys for N-mixture models
 -   [x] Create MIT license
 -   [ ] Upload raw simulation results in zenodo
 -   [x] Generate table results
--   [ ] Build Rmd files for webpage
+-   [x] Build Rmd files for webpage
 
 # Description
 
@@ -27,10 +27,11 @@ squared error) and optimal survey effort allocation for hierarchical
 N-mixture models, focusing on the application for drone-based surveys
 and the use of a double observer protocol to decompose the detection
 process in availability and perception.  
-We provide an interactive and “ready-to-consult” [webpage](http...)
-hoping to assist ecologists and conservationists in panning
-spatiotemporally replicated drone-based surveys for abundance modeling.
-There we show in detail simulation results and run some examples.
+We provide an interactive and “ready-to-consult”
+[webpage](https://ismaelvbrack.github.io/designNmix4droneSurveys) hoping
+to assist ecologists and conservationists in panning spatiotemporally
+replicated drone-based surveys for abundance modeling. There we show in
+detail simulation results and run some examples.
 
 # Simulation experiments
 
