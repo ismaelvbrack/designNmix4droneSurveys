@@ -19,7 +19,6 @@ We specifically addressed three aspects:
 This website contains:
 
 - [a basic explanation of the required sampling design and modeling description](designANDmodels.html)
-- [a brief description of the simulation experiments](simul_description.html)
 - [an interactive tool to run single examples with customizable scenario and survey - design](runExample.html)
 - [see the simulation results on the performance and optimal survey design for predefined scenarios](simul_results.html)
 
