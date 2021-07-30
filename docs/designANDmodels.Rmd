@@ -26,10 +26,11 @@ This count data can be fitted using hierarchical N-mixture models.
 * $M_{i} \sim {\sf Poisson}(\lambda)$
 * $Y_{i,j} \sim {\sf Binomial}(M_i, p^{*})$, where $p^{*} = \phi.p$
 
-\ 
 <font size="2"> 
-$M_{i}$: Local abundance in sites {*i*...*S*} is governed by a mean local abundance $\lambda$ \ 
-$Y_{i,j}$: Observer counts for each site *i* in each visit *j* is determined by the overall detection probability \ $p^{*}$, that is the product of individuals availability $\phi$ and perception $p$
+$M_{i}$: Local abundance in sites {*i*...*S*} is governed by a mean local abundance $\lambda$\n
+
+$Y_{i,j}$: Observer counts for each site *i* in each visit *j* is determined by the overall detection probability
+$p^{*}$, that is the product of individuals availability $\phi$ and perception $p$
 </font>
 
 ### Double-observer protocol
@@ -41,9 +42,11 @@ $Y_{i,j}$: Observer counts for each site *i* in each visit *j* is determined by 
 * $Y_{i,j,k} \sim {\sf Multinomial}(N_{i,j}, \pi(p)_{k})$
 
 <font size="2"> 
-$M_{i}$: Local abundance in sites {*i*...*S*} is governed by a mean local abundance $\lambda$ \ 
-$N_{i,j}$: Number of individuals available for detection in site *i* and visit *j* depends on an availability probability $\phi$ \ 
-$Y_{i,j,k}$: Counts under each observable encounter history *k*, in each visit *j*, in each site *i*,  depends on the perception probability by each observer $p$ (*e.g.* $\pi_{10} = p(1-p)$ for detected by the 1st observer and not the 2nd)
+$M_{i}$: Local abundance in sites {*i*...*S*} is governed by a mean local abundance $\lambda$\n
+
+$N_{i,j}$: Number of individuals available for detection in site *i* and visit *j* depends on an availability probability $\phi$\n
+
+$Y_{i,j,k}$: Counts under each observable encounter history *k*, in each visit *j*, in each site *i*,  depends on the perception probability by each observer $p$ (*e.g.* $\pi_{10} = p(1-p)$ for detected by the 1st observer and not the 2nd)\n
 </font>
 
 ### Mixed (single and double) protocols

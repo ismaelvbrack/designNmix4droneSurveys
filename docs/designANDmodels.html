@@ -356,7 +356,8 @@ This count data can be fitted using hierarchical N-mixture models.</p>
 <li><span class="math inline">\(M_{i} \sim {\sf Poisson}(\lambda)\)</span></li>
 <li><span class="math inline">\(Y_{i,j} \sim {\sf Binomial}(M_i, p^{*})\)</span>, where <span class="math inline">\(p^{*} = \phi.p\)</span></li>
 </ul>
-<p>  <font size="2"> <span class="math inline">\(M_{i}\)</span>: Local abundance in sites {<em>i</em>…<em>S</em>} is governed by a mean local abundance <span class="math inline">\(\lambda\)</span>   <span class="math inline">\(Y_{i,j}\)</span>: Observer counts for each site <em>i</em> in each visit <em>j</em> is determined by the overall detection probability  <span class="math inline">\(p^{*}\)</span>, that is the product of individuals availability <span class="math inline">\(\phi\)</span> and perception <span class="math inline">\(p\)</span> </font></p>
+<p><font size="2"> <span class="math inline">\(M_{i}\)</span>: Local abundance in sites {<em>i</em>…<em>S</em>} is governed by a mean local abundance <span class="math inline">\(\lambda\)</span></p>
+<p><span class="math inline">\(Y_{i,j}\)</span>: Observer counts for each site <em>i</em> in each visit <em>j</em> is determined by the overall detection probability <span class="math inline">\(p^{*}\)</span>, that is the product of individuals availability <span class="math inline">\(\phi\)</span> and perception <span class="math inline">\(p\)</span> </font></p>
 </div>
 <div id="double-observer-protocol" class="section level3">
 <h3>Double-observer protocol</h3>
@@ -366,7 +367,9 @@ This count data can be fitted using hierarchical N-mixture models.</p>
 <li><span class="math inline">\(N_{i,j} \sim {\sf Binomial}(M_i, \phi)\)</span></li>
 <li><span class="math inline">\(Y_{i,j,k} \sim {\sf Multinomial}(N_{i,j}, \pi(p)_{k})\)</span></li>
 </ul>
-<p><font size="2"> <span class="math inline">\(M_{i}\)</span>: Local abundance in sites {<em>i</em>…<em>S</em>} is governed by a mean local abundance <span class="math inline">\(\lambda\)</span>   <span class="math inline">\(N_{i,j}\)</span>: Number of individuals available for detection in site <em>i</em> and visit <em>j</em> depends on an availability probability <span class="math inline">\(\phi\)</span>   <span class="math inline">\(Y_{i,j,k}\)</span>: Counts under each observable encounter history <em>k</em>, in each visit <em>j</em>, in each site <em>i</em>, depends on the perception probability by each observer <span class="math inline">\(p\)</span> (<em>e.g.</em> <span class="math inline">\(\pi_{10} = p(1-p)\)</span> for detected by the 1st observer and not the 2nd) </font></p>
+<p><font size="2"> <span class="math inline">\(M_{i}\)</span>: Local abundance in sites {<em>i</em>…<em>S</em>} is governed by a mean local abundance <span class="math inline">\(\lambda\)</span></p>
+<p><span class="math inline">\(N_{i,j}\)</span>: Number of individuals available for detection in site <em>i</em> and visit <em>j</em> depends on an availability probability <span class="math inline">\(\phi\)</span></p>
+<p><span class="math inline">\(Y_{i,j,k}\)</span>: Counts under each observable encounter history <em>k</em>, in each visit <em>j</em>, in each site <em>i</em>, depends on the perception probability by each observer <span class="math inline">\(p\)</span> (<em>e.g.</em> <span class="math inline">\(\pi_{10} = p(1-p)\)</span> for detected by the 1st observer and not the 2nd) </font></p>
 </div>
 <div id="mixed-single-and-double-protocols" class="section level3">
 <h3>Mixed (single and double) protocols</h3>

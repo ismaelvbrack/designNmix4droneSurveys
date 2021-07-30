@@ -2,11 +2,17 @@
 title: Designing drone surveys for N-mixture models
 ---
 
-# Performance and optimal design of N-mixture models for spatiotemporally replicated drone-based surveys
+```{r, ,echo=F, out.width='90%', fig.align='center'}
+knitr::include_graphics('drones and marsh deer.png')
+```
 
+## Performance and optimal design of N-mixture models for spatiotemporally replicated drone-based surveys
+
+\ 
 
 #### This website is provided as a supplemental material of the manuscript *Optimally designing drone surveys for wildlife abundance modeling with N-mixture models*, Brack I.V., Kindel A., Oliveira L.F.B., Lahoz-Monfort J.J. 2021.
 
+\ 
 
 We explore, in a very wide scan study with several scenarios, the performance and optimal survey effort allocation for hierarchical N-mixture models, focusing on the application for drone-based surveys and the use of a double observer protocol to decompose the detection process in availability and perception.\
 

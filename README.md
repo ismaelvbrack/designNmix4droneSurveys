@@ -25,7 +25,7 @@ This repository contains the simulation results and `R` codes to
 explore, in a very wide scan study, the performance (based on root mean
 squared error) and optimal survey effort allocation for hierarchical
 N-mixture models, focusing on the application for drone-based surveys
-and the use of a double observer protocol to decompose the detection
+and the use of a double-observer protocol to decompose the detection
 process in availability and perception.  
 We provide an interactive and “ready-to-consult”
 [webpage](https://ismaelvbrack.github.io/designNmix4droneSurveys) hoping
@@ -45,15 +45,15 @@ The simulation study is divided in three parts:
     survey effort allocation in terms of spatial vs. temporal
     prioritization for each scenario.**  
 
--   #### Part 2: *exploring the benefit of the double observer protocol*
+-   #### Part 2: *exploring the benefit of the double-observer protocol*
 
-    **In this experiment, we investigate how the use of double observer
+    **In this experiment, we investigate how the use of double-observer
     protocol increases model performance and affects optimal survey
     effort allocation.**  
 
--   #### Part 3: *can the double-observer protocol be used to reduce field survey effort?*
+-   #### Part 3: *reducing fieldwork effort by employing a double-observer protocol*
 
-    **Here, we evaluate if the use of double observer protocol can
+    **Here, we evaluate if the use of double-observer protocol can
     reduce the effort needed in fieldwork to achieve the same model
     performance as in a single observer approach.**  
 
