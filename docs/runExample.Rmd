@@ -15,5 +15,5 @@ Choose biological and observational parameters and survey design settings to sim
 <iframe height="750" width="110%" frameborder="no" src="https://ismaelbrack.shinyapps.io/simulNmix_runExample/"> </iframe>
 
 \ 
-<span style="color: red;"> Red numbers </span> indicate that the 95% confidence interval did **not** cover the true value\
-<span style="color: blue;"> Blue numbers </span> indicate that the 95% confidence interval did cover the true value 
+<span style="color: red;">Red numbers </span> indicate that the 95% confidence interval did **not** cover the true value\
+<span style="color: blue;">Blue numbers </span> indicate that the 95% confidence interval did cover the true value 

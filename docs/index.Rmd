@@ -2,7 +2,7 @@
 title: Designing drone surveys for N-mixture models
 ---
 
-```{r, ,echo=F, out.width='90%', fig.align='center'}
+```{r, ,echo=F, out.width='90%', fig.align='left'}
 knitr::include_graphics('drones and marsh deer.png')
 ```
 

@@ -16,7 +16,7 @@
 <script src="site_libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -116,33 +116,33 @@ summary {
 <style type="text/css">
 /* padding for bootstrap navbar */
 body {
-  padding-top: 66px;
+  padding-top: 60px;
   padding-bottom: 40px;
 }
 /* offset scroll position for anchor links (for fixed navbar)  */
 .section h1 {
-  padding-top: 71px;
-  margin-top: -71px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .section h2 {
-  padding-top: 71px;
-  margin-top: -71px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .section h3 {
-  padding-top: 71px;
-  margin-top: -71px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .section h4 {
-  padding-top: 71px;
-  margin-top: -71px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .section h5 {
-  padding-top: 71px;
-  margin-top: -71px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .section h6 {
-  padding-top: 71px;
-  margin-top: -71px;
+  padding-top: 65px;
+  margin-top: -65px;
 }
 .dropdown-submenu {
   position: relative;
@@ -338,6 +338,13 @@ $(document).ready(function () {
 <h2>Sampling design</h2>
 <p>Basic sampling design for N-mixture models consists in spatiotemporally replicated surveys, that is, multiple sites are surveyed in multiple visits. Sites of drone-based surveys can be derived from segments/stretches of flight lines. After fieldwork, drone collected imagery can be reviewed either by one or two observers (or maybe more..) so that each observer mark individuals on images.<br />
 With this survey design, it is possible to estimate abundance while accounting for the two-common false-negative errors in aerial surveys: <strong>availability and perception</strong>.</p>
+<div class="figure" style="text-align: center">
+<img src="FNDetectionErrrors_drones.png" alt="Figure: False-negative detection errors in counts from drone-based surveys: i) individuals unavailable for detection; ii) detection failure by a human observer or algorithm given that it is available" width="60%" />
+<p class="caption">
+Figure: False-negative detection errors in counts from drone-based surveys: i) individuals unavailable for detection; ii) detection failure by a human observer or algorithm given that it is available
+</p>
+</div>
+<p> </p>
 <div class="figure" style="text-align: center">
 <img src="fig_samplingDesign_models.png" alt="Figure: Spatiotemporally replicated drone-based surveys, resulting count data by either single or double observers, and N-mixture models" width="75%" />
 <p class="caption">
