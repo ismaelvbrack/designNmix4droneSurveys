@@ -10,11 +10,11 @@ knitr::include_graphics('drones and marsh deer.png')
 
 \ 
 
-#### This website is provided as a supplemental material of the manuscript *Optimally designing drone surveys for wildlife abundance modeling with N-mixture models*, Brack I.V., Kindel A., Oliveira L.F.B., Lahoz-Monfort J.J. 2021.
+#### This website is provided as a supplementary material of the manuscript *Optimally designing drone surveys for wildlife abundance modeling with N-mixture models*, Brack I.V., Kindel A., Oliveira L.F.B., Lahoz-Monfort J.J. 2021.
 
 \ 
 
-In that study, we explore, in a very wide scan study with several scenarios, the performance and optimal survey effort allocation for hierarchical N-mixture models, focusing on their application for drone-based surveys.  We also investigate the use of a double observer protocol to decompose the detection process in availability and perception.\
+In that study, we explore, in a very wide scan study with several scenarios, the performance and optimal survey effort allocation for hierarchical N-mixture models, focusing on their application for drone-based surveys.  We also investigate the use of a double observer protocol in image reviewing to decompose the detection process in availability and perception.\
 
 We specifically addressed three aspects:
 

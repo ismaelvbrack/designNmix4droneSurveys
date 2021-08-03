@@ -24,9 +24,10 @@ WILDLIFE ABUNDANCE MODELING WITH N-MIXTURE MODELS*.
 This repository contains the simulation results and `R` codes to
 explore, in a very wide scan study, the performance (based on root mean
 squared error) and optimal survey effort allocation for hierarchical
-N-mixture models, focusing on the application for drone-based surveys
-and the use of a double-observer protocol to decompose the detection
-process in availability and perception.  
+N-mixture models, focusing on their application for drone-based surveys.
+We also investigate the use of a double-observer protocol in image
+reviewing to decompose the detection process in availability and
+perception.  
 We provide an interactive and “ready-to-consult”
 [webpage](https://ismaelvbrack.github.io/designNmix4droneSurveys) hoping
 to assist ecologists and conservationists in panning spatiotemporally
