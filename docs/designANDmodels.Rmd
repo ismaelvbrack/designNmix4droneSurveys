@@ -9,6 +9,12 @@ Basic sampling design for N-mixture models consists in spatiotemporally replicat
 With this survey design, it is possible to estimate abundance while accounting for the two-common false-negative errors in aerial surveys: **availability and perception**. 
 
 
+```{r, ,echo=F, out.width='60%', fig.align='center',fig.cap="Figure: False-negative detection errors in counts from drone-based surveys: i) individuals unavailable for detection; ii) detection failure by a human observer or algorithm given that it is available"}
+knitr::include_graphics('FNDetectionErrrors_drones.png')
+```
+
+\ 
+
 ```{r, ,echo=F, out.width='75%', fig.align='center',fig.cap="Figure: Spatiotemporally replicated drone-based surveys, resulting count data by either single or double observers, and N-mixture models"}
 knitr::include_graphics('fig_samplingDesign_models.png')
 ```
