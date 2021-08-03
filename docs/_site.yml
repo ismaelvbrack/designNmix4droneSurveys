@@ -23,5 +23,5 @@ navbar:
       
 output:
   html_document:
-    theme: readable
+    theme: cosmo
     highlight: textmate
