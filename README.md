@@ -12,13 +12,12 @@ Designing drone surveys for N-mixture models
 
 Repository for the manuscript *OPTIMALLY DESIGNING DRONE SURVEYS FOR
 WILDLIFE ABUNDANCE MODELING WITH N-MIXTURE MODELS*.  
-This repository contains the simulation results and `R` codes to
-explore, in a very wide scan study, the performance (based on root mean
-squared error) and optimal survey effort allocation for hierarchical
-N-mixture models, focusing on their application for drone-based surveys.
-We also investigate the use of a double-observer protocol in image
-reviewing to decompose the detection process in availability and
-perception.  
+This repository contains the simulation results and `R` code to explore,
+in a very wide scan study, the performance (based on root mean squared
+error) and optimal survey effort allocation for hierarchical N-mixture
+models, focusing on their application for drone-based surveys. We also
+investigate the use of a double-observer protocol in image reviewing to
+decompose the detection process in availability and perception.  
 We provide an interactive and “ready-to-consult”
 [webpage](https://ismaelvbrack.github.io/designNmix4droneSurveys) hoping
 to assist ecologists and conservationists in panning spatiotemporally
@@ -73,14 +72,13 @@ The simulation study is divided in three parts:
     -   `simulNmix_scenarios_parallel.R`: script to run several
         simulation iterations. This script was used to produce raw
         simulation results using maximum likelihood estimation.
-    -   `Part*/`: codes for each simulation experiment
+    -   `Part*/`: code for each simulation experiment
         -   `C&E_.R*`: clean and extract raw simulation results and save
             in the processed folder
-        -   `calcRMSE_*.R`: codes to calculate the RMSE for each
-            scenario (under a combination of local abundance and
-            availability) and get the optimal number of visits for each
-            scenario.
-        -   `fig*.R`: codes to generate figures
+        -   `calcRMSE_*.R`: code to calculate the RMSE for each scenario
+            (under a combination of local abundance and availability)
+            and get the optimal number of visits for each scenario.
+        -   `fig*.R`: code to generate figures
 
 # Running code
 

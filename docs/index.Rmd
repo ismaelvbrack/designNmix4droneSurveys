@@ -30,8 +30,8 @@ This website contains:
 
 \ 
 
-Codes (`R`) to reproduce the same results or explore other scenarios are available at the [GitHub repo](https://github.com/ismaelvbrack/designNmix4droneSurveys).\
-We also provide codes to fit the models with the `unmarked` `R` package using maximum likelihood estimation and `JAGS` codes for Bayesian analysis.
+Code (`R`) to reproduce the same results or explore other scenarios are available at the [GitHub repo](https://github.com/ismaelvbrack/designNmix4droneSurveys).\
+We also provide code to fit the models with the `unmarked` `R` package using maximum likelihood estimation and `JAGS` code for Bayesian analysis.
 
 For more details of the simulation study, check the paper!
 
