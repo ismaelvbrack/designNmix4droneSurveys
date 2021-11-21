@@ -117,7 +117,7 @@ plotRMSE <- function(data,data2=NULL,scen,type="simple",complete=FALSE,yax=NULL)
         labs(x="Optimal J") + scale_y_discrete(limits=rev) +
         theme(panel.background = element_rect(colour = "black"),legend.position="none",
               axis.text=element_blank(),axis.title.y=element_blank(),
-              axis.title.x=element_text(face="bold",size=12)) + 
+              axis.title.x=element_text(face="bold",size=16)) + 
         scale_color_manual(values=wes_palette("Zissou1",length(unique(data$obs2)),type="continuous"))
       
       fig.out <- ggarrange(fig.out,figJs,nrow=2,align="v",heights=c(0.8,0.2))
@@ -140,7 +140,7 @@ plotRMSE <- function(data,data2=NULL,scen,type="simple",complete=FALSE,yax=NULL)
         labs(x="Optimal J") + scale_y_discrete(limits=rev) +
         theme(panel.background = element_rect(colour = "black"),legend.position="none",
               axis.text=element_blank(),axis.title.y=element_blank(),
-              axis.title.x=element_text(face="bold",size=12)) + 
+              axis.title.x=element_text(face="bold",size=16)) + 
         scale_color_manual(values=wes_palette("Zissou1",length(unique(data$obs2)),type="continuous"))
       
       fig.out <- ggarrange(fig.out,figJs,nrow=2,align="v",heights=c(0.8,0.2))
@@ -193,7 +193,7 @@ plotRMSE <- function(data,data2=NULL,scen,type="simple",complete=FALSE,yax=NULL)
         labs(x="Optimal J") + scale_y_discrete(limits=rev) +
         theme(panel.background = element_rect(colour = "black"),legend.position="none",
               axis.text=element_blank(),axis.title.y=element_blank(),
-              axis.title.x=element_text(face="bold",size=12)) + 
+              axis.title.x=element_text(face="bold",size=16)) + 
         scale_color_manual(labels=c("1obs","2obs"),values=c("#3B9AB2","#F21A00")) +
         scale_linetype_manual(values=c("solid", "twodash"))
       
@@ -218,7 +218,7 @@ plotRMSE <- function(data,data2=NULL,scen,type="simple",complete=FALSE,yax=NULL)
         labs(x="Optimal J") + scale_y_discrete(limits=rev) +
         theme(panel.background = element_rect(colour = "black"),legend.position="none",
               axis.text=element_blank(),axis.title.y=element_blank(),
-              axis.title.x=element_text(face="bold",size=12)) + 
+              axis.title.x=element_text(face="bold",size=16)) + 
         scale_color_manual(labels=c("1obs","2obs"),values=c("#3B9AB2","#F21A00")) +
         scale_linetype_manual(values=c("solid", "twodash"))
       

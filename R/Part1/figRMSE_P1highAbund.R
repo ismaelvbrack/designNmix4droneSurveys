@@ -62,5 +62,5 @@ figRMSE <- grid.arrange(
 )
 
 # save figure!
-ggsave(here::here("outputs","figs","figRMSE_P1highAbund.png"),figRMSE,width=50,height=40,units="cm")
+ggsave(here::here("outputs","figs","figRMSE_P1highAbund.pdf"),figRMSE,width=50,height=40,units="cm")
 

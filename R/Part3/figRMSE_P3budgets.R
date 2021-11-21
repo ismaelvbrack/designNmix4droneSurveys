@@ -32,7 +32,7 @@ for(scen in 1:length(rel.rmse2)){
              geom_hline(aes(yintercept=RMSE1ref[1],color="1obs"),size=1,linetype="dashed") +
              scale_color_manual(values=c("#3B9AB2","#F21A00")) +
              #scale_x_continuous(breaks=seq(round(min(a$S)/100)*100,round(max(a$S)/100)*100,length.out=6)) +
-             theme_classic() + theme(legend.position="none") +
+             theme_classic() + theme(legend.position="none",axis.text=element_text(size=14)) +
              labs(x="Total effort (budget)",y="RMSE",color="Model")}
   )
 }
@@ -43,16 +43,16 @@ figRMSE <- grid.arrange(figRMSE1+theme(axis.title=element_blank()),figRMSE2+them
                         figRMSE5+theme(axis.title=element_blank()),figRMSE6+theme(axis.title=element_blank()),
                         nrow=3,ncol=2)
 # add x- and y- axis labels
-figRMSE <- annotate_figure(figRMSE,left=text_grob("relative RMSE", size=16, rot=90),
-                                  bottom=text_grob("Total effort (budget)", size=16))
+figRMSE <- annotate_figure(figRMSE,left=text_grob("relative RMSE", size=18, rot=90),
+                                  bottom=text_grob("Total effort (budget)", size=18))
 
 #* arrange final figure with simulation scenarios labels
 figRMSE <- grid.arrange(
   #lambda values
-  text_grob("0.2",face="bold",size=14),text_grob("1",face="bold",size=14),
+  text_grob("0.2",face="bold",size=14),text_grob("1",face="bold",size=16),
   
   #phi values
-  text_grob("0.2",face="bold",size=14),text_grob("0.4",face="bold",size=14),text_grob("0.6",face="bold",size=14),
+  text_grob("0.2",face="bold",size=14),text_grob("0.4",face="bold",size=16),text_grob("0.6",face="bold",size=14),
   
   #big 2x3 figure
   figRMSE,
@@ -63,20 +63,25 @@ figRMSE <- grid.arrange(
                scale_color_manual(values=c("#3B9AB2","#F21A00")) +
                #scale_x_continuous(breaks=seq(round(min(a$S)/100)*100,round(max(a$S)/100)*100,length.out=6)) +
                theme_classic() + 
-               labs(x="Total effort (budget)",y="RMSE",color="Model")),
+               labs(x="Total effort (budget)",y="RMSE",color="Model") +
+               theme(legend.position="top",legend.key.size=unit(1.4,"cm"),
+                  legend.text=element_text(size=14),
+                  legend.title=element_text(size=16,face="bold"))),
   #specs
-  ncol=3,nrow=4,
-  layout_matrix=cbind(c(7,3:5), rbind(1:2, matrix(6,ncol=2,nrow=3))),
-  heights=c(.1,rep(1,3)),widths=c(.1,rep(1,2)),
+  ncol=3,nrow=5,
+  layout_matrix=rbind(cbind(c(NA,3:5), rbind(1:2, matrix(6,ncol=2,nrow=3))),c(NA,7,7)),
+  heights=c(.1,rep(1,3),.2),widths=c(.1,rep(1,2)),
   vp=viewport(width=.9,height=.9),
   
   # scenarios labels
-  top=textGrob(expression(lambda), vjust=0,gp = gpar(fontsize=22,fontface="bold")),
-  left=textGrob(expression(phi), rot=90,gp=gpar(fontsize=22,fontface="bold"), vjust=0)
+  top=grobTree(rectGrob(height=3.4,width=.8,vjust=.3,gp=gpar(fill="gray80")),
+               textGrob("Local abundance", vjust=0,gp = gpar(fontsize=18,fontface="bold"))),
+  left=grobTree(rectGrob(height=.75,width=3.4,hjust=1,vjust=0.45,gp=gpar(fill="gray80")),
+                textGrob("Availability", rot=90,gp=gpar(fontsize=18,fontface="bold"), hjust=0,vjust=-.5))
 )
 
 # save figure!
-ggsave(here::here("outputs","figs","figRMSE_P3budgets.png"),figRMSE,width=18,height=24,units="cm")
+ggsave(here::here("outputs","figs","figRMSE_P3budgets.png"),figRMSE,width=24,height=36,units="cm")
 
 
 

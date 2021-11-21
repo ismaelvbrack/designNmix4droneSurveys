@@ -30,15 +30,16 @@ figRMSE <-
   )
 
 # add x- and y- axis labels
-figRMSE <- annotate_figure(figRMSE,left=text_grob("relative RMSE", size=20, rot=90),
-                           bottom=text_grob("Number of visits (J)", size=20))
+figRMSE <- annotate_figure(figRMSE,left=text_grob("relative RMSE", size=22, rot=90),
+                           bottom=text_grob("Number of visits (J)", size=22))
 
 # legend
 my.legend <- get_legend(ggplot(data=rel.rmse2[[1]],aes(x=as.numeric(as.character(J)),y=RMSE,color=obs2)) +
                 geom_line(size=1.6) + 
               scale_color_manual(values=wes_palette("Zissou1",length(unique(rel.rmse2[[1]]$obs2)),type="continuous")) + 
-              theme(legend.position="right",legend.key.size=unit(1.6,"cm"),
-                      legend.text=element_text(size=14),legend.title=element_blank()))
+              labs(color="Prop. of Double Obs.") +
+              theme(legend.position="bottom",legend.key.size=unit(1.6,"cm"),
+                      legend.text=element_text(size=16),legend.title=element_text(size=20,face="bold")))
   
 
 figRMSE <- grid.arrange(
@@ -53,18 +54,20 @@ figRMSE <- grid.arrange(
   #legend
   my.legend,
   #specs
-  ncol=3,nrow=4,
-  layout_matrix=cbind(c(7,3:5), rbind(1:2, matrix(6,ncol=2,nrow=3))),
-  heights=c(.1,rep(1,3)),widths=c(.1,rep(1,2)),
+  ncol=3,nrow=5,
+  layout_matrix=rbind(cbind(c(NA,3:5), rbind(1:2, matrix(6,ncol=2,nrow=3))),c(NA,7,7)),
+  heights=c(.1,rep(1,3),.2),widths=c(.1,rep(1,2)),
   vp=viewport(width=.9,height=.9),
   
   # scenarios labels
-  top=textGrob("Local abundance", vjust=0,gp = gpar(fontsize=22,fontface="bold")),
-  left=textGrob("           Availability", rot=90,gp=gpar(fontsize=22,fontface="bold"), vjust=0)
+  top=grobTree(rectGrob(height=5,width=.8,vjust=.3,gp=gpar(fill="gray80")),
+               textGrob("Local abundance", vjust=0,gp = gpar(fontsize=22,fontface="bold"))),
+  left=grobTree(rectGrob(height=.75,width=5,hjust=1,vjust=0.45,gp=gpar(fill="gray80")),
+                textGrob("Availability", rot=90,gp=gpar(fontsize=22,fontface="bold"), hjust=0,vjust=-.5))
 )
 
 # save figure!
-ggsave(here::here("outputs","figs","figRMSE_P2propObs.png"),figRMSE,width=40,height=55,units="cm")
+ggsave(here::here("outputs","figs","figRMSE_P2propObs.png"),figRMSE,width=40,height=64,units="cm")
 
 
 # 2. Figure optRMSE ~ obs2 ---------------------------------------------------
