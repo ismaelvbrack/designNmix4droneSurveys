@@ -1,17 +1,20 @@
 Designing drone surveys for N-mixture models
 ================
 
--   [Description](#description)
--   [Simulation experiments](#simulation-experiments)
--   [Repository contents](#repository-contents)
--   [Running code](#running-code)
+-   <a href="#description" id="toc-description">Description</a>
+-   <a href="#simulation-experiments"
+    id="toc-simulation-experiments">Simulation experiments</a>
+-   <a href="#repository-contents" id="toc-repository-contents">Repository
+    contents</a>
+-   <a href="#running-code" id="toc-running-code">Running code</a>
 
 #### ***Performance and optimal design of N-mixture models for spatiotemporally replicated drone-based surveys***
 
 # Description
 
 Repository for the manuscript *OPTIMALLY DESIGNING DRONE SURVEYS FOR
-WILDLIFE ABUNDANCE MODELING WITH N-MIXTURE MODELS*.  
+WILDLIFE ABUNDANCE MODELING WITH N-MIXTURE MODELS* (Brack et al. 2022;
+Methods in Ecology and Evolution).  
 This repository contains the simulation results and `R` code to explore,
 in a very wide scan study, the performance (based on root mean squared
 error) and optimal survey effort allocation for hierarchical N-mixture
