@@ -40,3 +40,6 @@ vignettes/*.pdf
 
 # Raw simulation results
 data/raw_simul_resu/*.rds
+
+# MEE submission files
+ms/Submission_MEE/
